@@ -20,9 +20,10 @@ public class EmployeeController {
         return employee;
     }
 
+
+
     @GetMapping("/employees")
     public List<Employee> findAll(){
-
         return employeeRepository.findAll();
     }
     @GetMapping("/employees/{id}")
@@ -30,6 +31,7 @@ public class EmployeeController {
 
         return employeeRepository.findById(id);
     }
+
 
     @PutMapping("/employee}")
     public void update(@RequestBody Employee employee){
